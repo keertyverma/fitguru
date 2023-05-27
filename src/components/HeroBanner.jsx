@@ -21,11 +21,11 @@ const HeroBanner = () => {
         mb="23px"
         mt="30px"
       >
-        Unlock Your Potential. <br />
-        Embrace the Challenge.
+        Unlock Your Potential <br />
+        Embrace the Challenge
       </Typography>
       <Typography fontSize="20px" mb={3}>
-        Start your fitness revolution today. <br />
+        Start your fitness revolution today <br />
         Check out most effective exercises
       </Typography>
       <Button

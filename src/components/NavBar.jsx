@@ -12,7 +12,6 @@ const NavBar = () => {
     >
       <Link to="/" style={{ textDecoration: "none" }}>
         <img
-          className="logo"
           src={Logo}
           alt="logo"
           style={{ width: "48px", height: "48px", margin: "0 20px" }}
