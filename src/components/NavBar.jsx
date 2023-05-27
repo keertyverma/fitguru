@@ -10,7 +10,7 @@ const NavBar = () => {
       sx={{ gap: { sm: "122px", xs: "40px" }, mt: { sm: "32px", xs: "20px" } }}
       px="20px"
     >
-      <Link to="/">
+      <Link to="/" style={{ textDecoration: "none" }}>
         <img
           className="logo"
           src={Logo}

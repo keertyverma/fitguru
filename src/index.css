@@ -14,3 +14,19 @@ body {
   font-family: "Josefin Sans";
   background-color: #fffafb;
 }
+
+/* Hero Banner */
+.hero-banner-img {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  width: 700px;
+  height: 900px;
+  margin-top: -330px;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-banner-img {
+    display: none;
+  }
+}
