@@ -87,6 +87,11 @@ body {
   height: 326px;
 }
 
+.detail-image {
+  width: 729px;
+  height: 742px;
+}
+
 @media screen and (max-width: 1200px) {
   .hero-banner-img {
     display: none;
@@ -94,6 +99,11 @@ body {
 
   .exercise-card {
     width: 320px;
+  }
+
+  .detail-image {
+    width: 300px;
+    height: 300px;
   }
 }
 
