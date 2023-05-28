@@ -7,13 +7,16 @@ FitGuru is your fitness expert which provide information about exercises
 
 ## Features
 
-- Search Exercises
-- Get exercise focusing on particular body parts
-- Get youtube video to refer
+- Responsive UI
+- Display exercises
+- Search exercise by name, body part, equipment, target muscles
+- filter exercise by body part
+- Exercise detail page has exercise details, related youtube videos to refer, related exercises that targets same muscles and exercises that use the same equipment
+- Pagination, Horizontal scrolling, SpinnerLoader
 
 ## Built with:
 
 - [React JS](https://reactjs.org/)
 - Javascript
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Material UI](https://mui.com/)
 - [Vite](https://vitejs.dev/) - Build Tool
