@@ -7,6 +7,13 @@ export const exerciseOptions = {
   },
 };
 
+export const youtubeOptions = {
+  headers: {
+    "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
+    "X-RapidAPI-Key": import.meta.env.VITE_REACT_APP_RAPID_API_KEY,
+  },
+};
+
 const fetchData = (url, options) => {
   return axios.get(url, options);
 };
