@@ -101,6 +101,11 @@ body {
   text-decoration: none;
 }
 
+.footer-link {
+  text-decoration: none;
+  color: #000;
+}
+
 @media screen and (max-width: 1200px) {
   .hero-banner-img {
     display: none;

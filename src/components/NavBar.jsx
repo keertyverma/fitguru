@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import Logo from "../assets/images/app-logo.png";
@@ -11,11 +11,16 @@ const NavBar = () => {
       px="20px"
     >
       <Link to="/" style={{ textDecoration: "none" }}>
-        <img
-          src={Logo}
-          alt="logo"
-          style={{ width: "48px", height: "48px", margin: "0 20px" }}
-        />
+        <Stack direction="row" gap="0">
+          <img
+            src={Logo}
+            alt="logo"
+            style={{ width: "48px", height: "48px", margin: "0 20px" }}
+          />
+          <Typography variant="h5" fontWeight="bold">
+            FitGuru
+          </Typography>
+        </Stack>
       </Link>
       <Stack direction="row" gap="40px" fontSize="24px" alignItems="flex-end">
         <Link

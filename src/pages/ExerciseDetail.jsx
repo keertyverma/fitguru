@@ -2,15 +2,18 @@ import { Box } from "@mui/material";
 import Detail from "../components/Detail";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import { fetchData, exerciseOptions, youtubeOptions } from "../utils/fetchData";
 import ExerciseVideos from "../components/ExerciseVideos";
+import SimilarExercises from "../components/SimilarExercises";
 
 const ExerciseDetail = ({}) => {
   const [exerciseDetail, setExerciseDetail] = useState({});
   const [exerciseVideos, setExerciseVideos] = useState([]);
+  const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
+  const [equipmentExercises, setEquipmentExercises] = useState([]);
 
   const { id } = useParams();
-
   useEffect(() => {
     // Get exercise by id
     const exerciseDbUrl = "https://exercisedb.p.rapidapi.com/exercises";
@@ -29,13 +32,32 @@ const ExerciseDetail = ({}) => {
     ).then((res) => {
       setExerciseVideos(res.data.contents);
     });
+
+    // Get target muscle exercise data
+    fetchData(
+      `${exerciseDbUrl}/target/${exerciseDetail.target}`,
+      exerciseOptions
+    ).then((res) => {
+      setTargetMuscleExercises(res.data);
+    });
+
+    // Get equipment exercise data
+    fetchData(
+      `${exerciseDbUrl}/equipment/${exerciseDetail.equipment}`,
+      exerciseOptions
+    ).then((res) => {
+      setEquipmentExercises(res.data);
+    });
   }, [id]);
 
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
       <ExerciseVideos name={exerciseDetail.name} videos={exerciseVideos} />
-      <p>Similar exercises</p>
+      <SimilarExercises
+        targetMuscleExercises={targetMuscleExercises}
+        equipmentExercises={equipmentExercises}
+      />
     </Box>
   );
 };
