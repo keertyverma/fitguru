@@ -19,7 +19,6 @@ const SearchExercises = ({
     });
   }, []);
 
-  console.log("bodyParts =", bodyParts);
   const handleSearch = () => {
     if (searchText) {
       fetchData(API_URI, exerciseOptions)

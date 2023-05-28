@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import HeroBanner from "../components/HeroBanner";
 import SearchExercises from "../components/SearchExercises";
+import Exercises from "../components/Exercises";
 
 const Home = () => {
   const [exercises, setExercises] = useState([]);
@@ -12,9 +13,14 @@ const Home = () => {
     <Box>
       <HeroBanner />
       <SearchExercises
-        setExercise={setExercises}
+        setExercises={setExercises}
         selectedBodyPart={selectedBodyPart}
         setSelectedBodyPart={setSelectedBodyPart}
+      />
+      <Exercises
+        exercises={exercises}
+        setExercises={setExercises}
+        selectedBodyPart={selectedBodyPart}
       />
     </Box>
   );
