@@ -1,12 +1,16 @@
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
+import HorizontalScrollBar from "./HorizontalScrollBar";
 
-const SearchExercises = () => {
+const SearchExercises = ({
+  setExercises,
+  selectedBodyPart,
+  setSelectedBodyPart,
+}) => {
   const API_URI = "https://exercisedb.p.rapidapi.com/exercises";
 
   const [searchText, setSearchText] = useState("");
-  const [exercise, setExercise] = useState([]);
   const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
@@ -29,7 +33,7 @@ const SearchExercises = () => {
           );
 
           setSearchText("");
-          setExercise(searchedExercise);
+          setExercises(searchedExercise);
         })
         .catch((err) => console.log("Error = ", err));
     }
@@ -45,7 +49,7 @@ const SearchExercises = () => {
       >
         Explore and Find the Exercises
       </Typography>
-      <Box position="relative" mb="72px">
+      <Box position="relative" mb="20px">
         <TextField
           sx={{
             input: {
@@ -81,11 +85,11 @@ const SearchExercises = () => {
         </Button>
       </Box>
       <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
-        <Stack direction="row" gap="20px">
-          {bodyParts.map((e, index) => (
-            <p key={index}>{e}</p>
-          ))}
-        </Stack>
+        <HorizontalScrollBar
+          data={bodyParts}
+          selectedBodyPart={selectedBodyPart}
+          setSelectedBodyPart={setSelectedBodyPart}
+        />
       </Box>
     </Stack>
   );

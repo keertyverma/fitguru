@@ -25,13 +25,50 @@ body {
   margin-top: -330px;
 }
 
+.search-btn:hover {
+  color: #ff2625 !important;
+  border: 1px solid #ff2625 !important;
+}
+
+.bodypart-card {
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.bodypart-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.right-arrow,
+.left-arrow {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff2625;
+  font-size: 25px;
+  border-radius: 4px;
+  position: static;
+  bottom: -20px;
+  right: 80px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+}
+
+.right-arrow {
+  right: 140px;
+}
+
+.right-arrow:hover,
+.left-arrow:hover {
+  transform: scale(1.3, 1.3);
+}
+
 @media screen and (max-width: 1200px) {
   .hero-banner-img {
     display: none;
   }
-}
-
-.search-btn:hover {
-  color: #ff2625 !important;
-  border: 1px solid #ff2625 !important;
 }
