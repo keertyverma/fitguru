@@ -1,11 +1,25 @@
 import { Box, Pagination, Stack, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ExerciseCard from "./ExerciseCard";
+import { exerciseOptions, fetchData } from "../utils/fetchData";
+
+const API_URI = "https://exercisedb.p.rapidapi.com/exercises";
 
 const Exercises = ({ exercises, setExercises, selectedBodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const exercisesPerPages = 9;
 
+  useEffect(() => {
+    let uri =
+      selectedBodyPart === "all"
+        ? API_URI
+        : `${API_URI}/bodyPart/${selectedBodyPart}`;
+
+    fetchData(uri, exerciseOptions).then((res) => {
+      setExercises(res.data);
+    });
+  }, [selectedBodyPart]);
+
+  const exercisesPerPages = 9;
   const indexOfLastExercise = currentPage * exercisesPerPages;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPages;
   const currentExercises = exercises.slice(
