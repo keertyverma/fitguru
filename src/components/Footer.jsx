@@ -5,12 +5,13 @@ import Logo from "../assets/images/app-logo.png";
 const Footer = () => {
   return (
     <Box mt="80px" bgcolor="#fff3f4">
-      <Stack gap="40px" alignItems="center" px="40px" pt="24px">
+      <Stack gap="10px" alignItems="center" px="40px" pt="24px">
         <img
           src={Logo}
           alt="app logo"
-          style={{ width: "40px", height: "40px" }}
+          style={{ width: "50px", height: "50px" }}
         />
+
         <Typography variant="h6">
           Made with 💖 by{" "}
           <a

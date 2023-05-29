@@ -22,7 +22,12 @@ const NavBar = () => {
           </Typography>
         </Stack>
       </Link>
-      <Stack direction="row" gap="40px" fontSize="24px" alignItems="flex-end">
+      <Stack
+        direction="row"
+        fontSize="24px"
+        alignItems="flex-end"
+        sx={{ gap: { lg: "40px", xs: "15px" } }}
+      >
         <Link
           to="/"
           style={{
