@@ -8,6 +8,7 @@ const ExerciseVideos = ({ name, videos }) => {
       sx={{
         marginTop: { lg: "80px", xs: "20px" },
         marginLeft: { xs: "10px" },
+        p: "20px",
       }}
     >
       <Typography
