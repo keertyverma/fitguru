@@ -40,7 +40,11 @@ const NavBar = () => {
         </Link>
         <a
           href="#exercises"
-          style={{ textDecoration: "none", color: "#3A1212" }}
+          style={{
+            textDecoration: "none",
+            color: "#3A1212",
+            marginRight: "10px",
+          }}
         >
           Exercises
         </a>

@@ -37,9 +37,9 @@ const Exercises = ({ exercises, setExercises, selectedBodyPart }) => {
       <Typography
         variant="h4"
         mb="45px"
-        sx={{ fontSize: { lg: "35px", xs: "30px" } }}
+        sx={{ fontSize: { lg: "30px", xs: "25px" }, fontWeight: "600" }}
       >
-        Showing Results
+        {exercises.length !== 0 && "Showing Results"}
       </Typography>
       <Stack
         direction="row"

@@ -12,7 +12,7 @@ const Footer = () => {
           style={{ width: "50px", height: "50px" }}
         />
 
-        <Typography variant="h6">
+        <Typography variant="h6" mb="10px">
           Made with 💖 by{" "}
           <a
             href="https://www.linkedin.com/in/keertyverma/"
